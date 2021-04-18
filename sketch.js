@@ -41,21 +41,22 @@ function setup (){
 	}
 
 	createCanvas(windowWidth, windowHeight);
+
+	vel = 0;
+	let iinter = setInterval(() => {
+		if (vel < 10) {
+			vel += 0.2;
+		} else {
+			clearInterval(iinter);
+		}
+	}, 50);
+
 	textSize(17);
 	noStroke();
 }
 
 function mousePressed (){
-	if (!rot) {
-		vel = 0;
-		let iinter = setInterval(() => {
-			if (vel < 10) {
-				vel += 0.2;
-			} else {
-				clearInterval(iinter);
-			}
-		}, 50);
-	} else if (!acc) {
+	if (!acc) {
 		acc = 0.05 + 0.01 * random();
 	}
 }
@@ -67,13 +68,14 @@ function draw (){
 	rotate(radians(rot));
 	pieChart(diam, data);
 	pop();
+	fill('black');
 	triangle(
-		width / 2 + diam / 2,
+		width / 2 + diam / 2 - 5,
 		height / 2,
 		width / 2 + diam / 2 + 20,
-		height / 2 - 10,
+		height / 2 - 15,
 		width / 2 + diam / 2 + 20,
-		height / 2 + 10,
+		height / 2 + 15,
 	);
 
 	rot += Math.sqrt(vel * 10) || 0;
