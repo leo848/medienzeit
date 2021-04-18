@@ -56,7 +56,7 @@ function setup (){
 }
 
 function mousePressed (){
-	if (!acc) {
+	if (!acc && vel >= 10) {
 		acc = 0.05 + 0.01 * random();
 	}
 }
