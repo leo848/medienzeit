@@ -53,6 +53,7 @@ function setup (){
 
 	textSize(17);
 	noStroke();
+	fill('black');
 }
 
 function mousePressed (){
@@ -63,8 +64,9 @@ function mousePressed (){
 
 function draw (){
 	background(255, 120);
-	push();
 	text([ rot, vel, acc ], 20, 20);
+	push();
+
 	translate(width / 2, height / 2);
 	rotate(radians(rot));
 	pieChart(diam, data);
