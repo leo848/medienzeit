@@ -92,7 +92,6 @@ function draw (){
 		}
 	}
 	if (ran) {
-		console.log('rann');
 		push();
 		rectMode(CENTER);
 		imageMode(CENTER);
@@ -110,6 +109,7 @@ function draw (){
 		fill('black');
 
 		text(fApp[0], width / 2, height - 50);
+		document.getElementById('title').innerText = fApp[0];
 		pop();
 
 		noLoop();
