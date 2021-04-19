@@ -58,7 +58,7 @@ function setup (){
 
 function mousePressed (){
 	if (!acc && vel >= 10) {
-		acc = 0.03 + 0.01 * random();
+		acc = 0.02 + 0.01 * random();
 	}
 }
 
@@ -83,7 +83,7 @@ function draw (){
 	rot += Math.sqrt(vel * 10) || 0;
 
 	if (vel >= 0) {
-		acc *= 0.9971; //72;
+		//acc *= 0.9971; //72;
 		vel -= acc;
 	} else {
 		vel = 0;
