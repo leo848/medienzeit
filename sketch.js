@@ -110,6 +110,10 @@ function draw (){
 
 		text(fApp[0], width / 2, height - 50);
 		document.getElementById('title').innerText = fApp[0];
+
+		let msg = new SpeechSynthesisUtterance();
+		msg.text = fApp[0];
+		window.speechSynthesis.speak(msg);
 		pop();
 
 		noLoop();
