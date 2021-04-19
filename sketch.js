@@ -64,7 +64,6 @@ function mousePressed (){
 
 function draw (){
 	background(255, 120);
-	text([ rot, vel, acc ], 20, 20);
 	push();
 
 	translate(width / 2, height / 2);
