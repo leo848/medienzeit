@@ -83,7 +83,7 @@ function draw (){
 	rot += Math.sqrt(vel * 10) || 0;
 
 	if (vel >= 0) {
-		acc *= 0.9955; //72;
+		acc *= 0.9971; //72;
 		vel -= acc;
 	} else {
 		vel = 0;
