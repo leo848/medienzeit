@@ -4,8 +4,6 @@ let vel = 0;
 let acc = 0;
 let diam = 500;
 
-let msg = new SpeechSynthesisUtterance();
-
 let storage = window.localStorage;
 
 let fApp = eval(storage.getItem(new Date().toDateString())) || undefined;
@@ -113,6 +111,7 @@ function draw (){
 		text(fApp[0], width / 2, height - 50);
 		document.getElementById('title').innerText = fApp[0];
 
+		let msg = new SpeechSynthesisUtterance();
 		msg.text = fApp[0];
 		window.speechSynthesis.speak(msg);
 		pop();
