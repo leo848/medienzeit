@@ -64,6 +64,10 @@ function mousePressed (){
 	}
 }
 
+function touchStarted (){
+mousePressed();
+}
+
 function draw (){
 	background(255, 120);
 	push();
