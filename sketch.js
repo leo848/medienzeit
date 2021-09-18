@@ -15,6 +15,7 @@ let imgz = {};
 function preload (){
 	data = loadJSON('apps.json', (json) => {
 		for (let i = 0; i < json.length; i++) {
+			document.write(json[i][0]);
 			imgz[json[i][3]] = loadImage(json[i][3]);
 		}
 		data = json;
