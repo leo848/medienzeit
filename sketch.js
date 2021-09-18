@@ -58,6 +58,7 @@ function setup (){
 }
 
 function mousePressed (){
+	alert("Felix, du hast gedreht!");
 	if (!acc && vel >= 10) {
 		acc = 0.01 + 0.005 * random();
 	}
